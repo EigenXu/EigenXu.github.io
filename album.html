@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Album — Yifeng Xu</title>
+  <meta name="description" content="Photographs from Yifeng Xu's research and life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,450;0,6..72,560;1,6..72,450&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page-head">
+      <a href="index.html">Yifeng Xu</a>
+    </header>
+
+    <nav aria-label="Page">
+      <a href="index.html#education">Education</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#capstone">Capstone</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="album.html" aria-current="page">Album</a>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Album</h2>
+        <div class="album">
+          <figure>
+            <a href="assets/album/wrc_weightlifting.jpg">
+              <img src="assets/album/wrc_weightlifting.jpg" alt="X-Humanoid team with three humanoid robots at the World Humanoid Robot Games weightlifting competition" width="1800" height="1350">
+            </a>
+            <figcaption><strong>World Humanoid Robot Games</strong> Weightlifting champion, with the X-Humanoid team.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Yifeng Xu</p>
+    </footer>
+  </div>
+
+  <dialog class="lightbox" id="lightbox">
+    <img alt="">
+    <p></p>
+  </dialog>
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    const lightboxCaption = lightbox.querySelector("p");
+
+    document.querySelectorAll(".album a").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const photo = link.querySelector("img");
+        const caption = link.closest("figure").querySelector("figcaption");
+        lightboxImg.src = link.href;
+        lightboxImg.alt = photo.alt;
+        lightboxCaption.textContent = caption.innerText;
+        lightbox.showModal();
+      });
+    });
+
+    lightbox.addEventListener("click", () => lightbox.close());
+  </script>
+</body>
+</html>
