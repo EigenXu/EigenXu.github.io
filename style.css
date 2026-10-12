@@ -309,6 +309,12 @@ h2 {
   margin: 0 0 8px;
 }
 
+a.org-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
 .logo-row .org-logo { margin: 0; }
 
 .logo-row a {
@@ -448,11 +454,22 @@ h2 {
   border-color: transparent transparent transparent currentColor;
 }
 
+.album-set { margin-top: 8px; }
+.album-set + .album-set { margin-top: 34px; }
+
+.album-set h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.28rem;
+  letter-spacing: -0.01em;
+}
+
 .album {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px 20px;
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 }
 
 .album figure { margin: 0; }
