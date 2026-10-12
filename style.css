@@ -215,6 +215,19 @@ h2 {
   font-weight: 700;
 }
 
+.pub .tldr {
+  margin: 6px 0 0;
+  color: rgba(92, 86, 78, 0.68);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.pub .tldr span {
+  margin-right: 0.35em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
 .meta {
   color: #3f3a36;
   font-family: var(--serif);
@@ -378,6 +391,29 @@ h2 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin: 14px 0 0;
+}
+
+.terrain.modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 0;
+}
+
+.terrain.modes a {
+  width: auto;
+  padding: 3px 8px;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+
+.terrain.modes strong {
+  display: inline;
+  margin-right: 0.28em;
+}
+
+.terrain.modes .play {
+  border-width: 4px 0 4px 6px;
 }
 
 .terrain a {
