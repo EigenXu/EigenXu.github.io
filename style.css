@@ -245,6 +245,7 @@ h2 {
 }
 
 .links a {
+  margin-right: 0.7em;
   color: #1a56c4;
   font-weight: 600;
   text-decoration: none;
