@@ -18,7 +18,7 @@
         <p class="role">M.S., University of Michigan<br>Hybrid Dynamic Robotics Lab · Prof. Xiaonan Huang</p>
         <p class="bio">I am a master's graduate of the University of Michigan. In the <a href="https://soft.robotics.umich.edu/">Hybrid Dynamic Robotics Lab</a>, advised by Prof. Xiaonan Huang, I worked on <a href="#capstone">sim-to-real transfer for novel robot morphologies</a>. I am also a technical founding member of the lab's spin-off, with Prof. Huang, where we build tactile dexterity for the agricultural sector.</p>
         <p class="bio">Before that, I received my bachelor's degree from Xi'an Jiaotong-Liverpool University and the University of Liverpool, graduating with High First Class Honours.</p>
-        <p class="bio">I was also very fortunate to be advised by Prof. Yuhao Chen at the University of Waterloo, where I conducted research on embodied perception and reasoning for manipulation <a class="cite" href="#pub-1">[1]</a> and navigation <a class="cite" href="#pub-5">[5]</a>. In industry, I was a research engineer at X-Humanoid, working on perceptive whole-body parkour and confined-space traversal <a class="cite" href="#pub-2">[2]</a> for full-size humanoid robots, and at InstAdapt, where I built a data engine for humanoid data and predictive locomotion <a class="cite" href="#pub-3">[3]</a>.</p>
+        <p class="bio">I was also very fortunate to be advised by Prof. Yuhao Chen at the University of Waterloo, where I conducted research on embodied perception and reasoning for manipulation <a class="cite" href="#pub-1">[1]</a> and navigation <a class="cite" href="#pub-6">[6]</a>. In industry, I was a research engineer at X-Humanoid, working on perceptive whole-body parkour <a class="cite" href="#pub-2">[2]</a> and confined-space traversal <a class="cite" href="#pub-3">[3]</a> for full-size humanoid robots, and at InstAdapt, where I built a data engine for humanoid data and predictive locomotion <a class="cite" href="#pub-4">[4]</a>.</p>
         <p class="bio">I pursue <strong>Deployable</strong> humanoid whole-body control, including athletic intelligence and loco-manipulation.</p>
       </div>
       <div class="identity">
@@ -101,11 +101,44 @@
         <h2>Preprints</h2>
 
         <article class="pub" id="pub-2">
+          <a class="teaser" href="assets/perceptive_parkour.gif">
+            <img src="assets/thumbs/perceptive_parkour.gif" alt="Humanoid robot performing perceptive whole-body parkour" width="480" height="270">
+          </a>
+          <div>
+            <h3><span class="pub-no">[2]</span> Versatile Perceptive Whole-Body Parkour via steerable generative motion prediction</h3>
+            <p class="authors"><strong>Yifeng Xu</strong>, Heye Wang, Yujie Zhang, Tianyuan Guo, Ziluo Ding, Zhiyuan Xu, He Kong</p>
+            <p class="tldr"><span>TL;DR</span> A command-conditioned diffusion motion model for contact-rich parkour, including knee support, stride step-up, skill composition, long-horizon steering, and generalization to a crate stack.</p>
+            <div class="terrain modes">
+              <a href="assets/parkour_demo.mp4?v=wm2" data-video data-caption="Knee support onto the box, then a jump down" data-alt="Humanoid robot using a knee to get onto a box, then jumping down">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>Knee support</strong></span>
+              </a>
+              <a href="assets/parkour/stepup_supportdown_demo.mp4?v=wm2" data-video data-caption="Stride step-up onto the box, then a one-hand support down" data-alt="Humanoid robot stepping onto a box with a large stride, then descending with one-hand support">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>Stride step-up</strong></span>
+              </a>
+              <a href="assets/parkour/long_horizon_skill_demo.mp4?v=wm2" data-video data-caption="Long-horizon skill composition: walk, climb up, climb down, walk" data-alt="Humanoid robot walking, climbing onto a box, climbing down, and walking on">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>skill comp.</strong></span>
+              </a>
+              <a href="assets/parkour/long_horizonlargebox_steering_demo.mp4?v=wm2" data-video data-caption="Long-horizon steering over a large box" data-alt="Humanoid robot steering across a large box during long-horizon parkour">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>Steering</strong></span>
+              </a>
+              <a href="assets/parkour/generalization_test.mp4?v=2" data-video data-caption="Generalization on a stack of crates, shown beside the elevation map" data-alt="Humanoid robot climbing a stack of crates while an elevation map shows the perceived terrain">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>Generalization</strong></span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub" id="pub-3">
           <a class="teaser" href="assets/REACH.gif">
             <img src="assets/thumbs/REACH.gif" alt="Humanoid crawling through a confined space with REACH" width="480" height="270">
           </a>
           <div>
-            <h3><span class="pub-no">[2]</span> REACH: An RL-based Hierarchical Humanoid Crawling Framework for Confined Space Traversal</h3>
+            <h3><span class="pub-no">[3]</span> REACH: An RL-based Hierarchical Humanoid Crawling Framework for Confined Space Traversal</h3>
             <p class="authors">Shengzhang Xu, Yuning Guo, Weiyi Hu, <strong>Yifeng Xu</strong>, Zhongyu Li, He Kong</p>
             <p class="tldr"><span>TL;DR</span> An RL-based hierarchical framework that combines variable-height bipedal walking and contact-rich crawling, with smooth transitions between them, so a humanoid can traverse confined spaces beyond crouched walking.</p>
             <p class="meta">2026 IEEE RAS International Conference on Humanoid Robots</p>
@@ -113,12 +146,12 @@
           </div>
         </article>
 
-        <article class="pub" id="pub-3">
+        <article class="pub" id="pub-4">
           <a class="teaser" href="assets/dream_policy.gif">
             <img src="assets/thumbs/dream_policy.gif" alt="DreamPolicy humanoid walking across varied terrain" width="480" height="360">
           </a>
           <div>
-            <h3><span class="pub-no">[3]</span> DreamPolicy: Scaling Humanoid Locomotion through Terrain-Aware Generative Planning</h3>
+            <h3><span class="pub-no">[4]</span> DreamPolicy: Scaling Humanoid Locomotion through Terrain-Aware Generative Planning</h3>
             <p class="authors">Yahao Fan, Tianxiang Gui, Kaiyang Ji, Shutong Ding, Chixuan Zhang, <strong>Yifeng Xu</strong>, Ke Yang, Jiayuan Gu, Jingyi Yu, Jingya Wang, Ye Shi</p>
             <p class="tldr"><span>TL;DR</span> A unified humanoid locomotion policy that tracks futures from a terrain-aware diffusion world model, so one controller generalizes across known, unseen, and combined terrains.</p>
             <p class="meta">Under review, <strong>ICLR</strong></p>
@@ -126,24 +159,24 @@
           </div>
         </article>
 
-        <article class="pub" id="pub-4">
+        <article class="pub" id="pub-5">
           <a class="teaser fit" href="assets/solo_main_final.png">
             <img src="assets/solo_main_final.png" alt="SoLO architecture for single-lookahead latent humanoid trajectory tracking" width="2090" height="1038">
           </a>
           <div>
-            <h3><span class="pub-no">[4]</span> SoLO: Single-lookahead Latent Humanoid cOntroller for Robust Trajectory Tracking</h3>
+            <h3><span class="pub-no">[5]</span> SoLO: Single-lookahead Latent Humanoid cOntroller for Robust Trajectory Tracking</h3>
             <p class="authors">Yuhao Chen, <strong>Yifeng Xu</strong></p>
             <p class="tldr"><span>TL;DR</span> A latent humanoid controller whose only command is a single lookahead position, so it learns how to speed up, turn, and recover while tracking a path at a commanded speed.</p>
             <p class="meta">Under review, <strong>AAAI</strong>, Phase 2</p>
           </div>
         </article>
 
-        <article class="pub" id="pub-5">
+        <article class="pub" id="pub-6">
           <a class="teaser fit" href="assets/office_hour.png">
             <img src="assets/office_hour.png" alt="OfficeHours benchmark: an office map, revisit videos, and change questions for a surveillance robot" width="1627" height="553">
           </a>
           <div>
-            <h3><span class="pub-no">[5]</span> OfficeHours: A Benchmark for Change Question Answering from Video across Many Revisits</h3>
+            <h3><span class="pub-no">[6]</span> OfficeHours: A Benchmark for Change Question Answering from Video across Many Revisits</h3>
             <p class="authors">Dayou Mao, Fernando Jose Pena Cantu, Adrian Ramlal, Junfeng Lei, Kseniia Buzko, <strong>Yifeng Xu</strong>, Ashkan Ebadi, Alexander Wong, Yuchen Cui, Yuhao Chen</p>
             <p class="tldr"><span>TL;DR</span> A video benchmark of many revisits to a real office, for asking how objects changed when each visit is raw monocular video rather than an aligned scan.</p>
             <p class="meta">Preprint</p>
@@ -207,38 +240,7 @@
           <div>
             <img class="org-logo" src="assets/x-humanoid-logo.png" alt="X-Humanoid 北京人形机器人创新中心" width="792" height="151">
             <p class="where">Research Engineer, Motion Intelligence Group · Advisors: Dr. Zhiyuan Xu, Prof. He Kong</p>
-            <p>Perceptive whole-body parkour for full-size humanoid robots. Confined-space traversal <a class="cite" href="#pub-2">[2]</a>. WRC Humanoid Weightlifting Competition, Gold Medal (top 1% worldwide) <a class="cite" href="album.html#games">[Album]</a>.</p>
-            <article class="pub" id="parkour">
-              <a class="teaser" href="assets/perceptive_parkour.gif">
-                <img src="assets/thumbs/perceptive_parkour.gif" alt="Humanoid robot performing perceptive whole-body parkour" width="480" height="270">
-              </a>
-              <div>
-                <h3>Perceptive whole-body parkour</h3>
-                <p class="tldr"><span>TL;DR</span> A command-conditioned diffusion motion model for contact-rich parkour, including knee support, stride step-up, skill composition, long-horizon steering, and generalization to a crate stack.</p>
-                <div class="terrain modes">
-                  <a href="assets/parkour_demo.mp4?v=wm2" data-video data-caption="Knee support onto the box, then a jump down" data-alt="Humanoid robot using a knee to get onto a box, then jumping down">
-                    <span class="play" aria-hidden="true"></span>
-                    <span><strong>Knee support</strong></span>
-                  </a>
-                  <a href="assets/parkour/stepup_supportdown_demo.mp4?v=wm2" data-video data-caption="Stride step-up onto the box, then a one-hand support down" data-alt="Humanoid robot stepping onto a box with a large stride, then descending with one-hand support">
-                    <span class="play" aria-hidden="true"></span>
-                    <span><strong>Stride step-up</strong></span>
-                  </a>
-                  <a href="assets/parkour/long_horizon_skill_demo.mp4?v=wm2" data-video data-caption="Long-horizon skill composition: walk, climb up, climb down, walk" data-alt="Humanoid robot walking, climbing onto a box, climbing down, and walking on">
-                    <span class="play" aria-hidden="true"></span>
-                    <span><strong>skill comp.</strong></span>
-                  </a>
-                  <a href="assets/parkour/long_horizonlargebox_steering_demo.mp4?v=wm2" data-video data-caption="Long-horizon steering over a large box" data-alt="Humanoid robot steering across a large box during long-horizon parkour">
-                    <span class="play" aria-hidden="true"></span>
-                    <span><strong>Steering</strong></span>
-                  </a>
-                  <a href="assets/parkour/generalization_test.mp4?v=2" data-video data-caption="Generalization on a stack of crates, shown beside the elevation map" data-alt="Humanoid robot climbing a stack of crates while an elevation map shows the perceived terrain">
-                    <span class="play" aria-hidden="true"></span>
-                    <span><strong>Generalization</strong></span>
-                  </a>
-                </div>
-              </div>
-            </article>
+            <p>Perceptive whole-body parkour for full-size humanoid robots <a class="cite" href="#pub-2">[2]</a>. Confined-space traversal <a class="cite" href="#pub-3">[3]</a>. WRC Humanoid Weightlifting Competition, Gold Medal (top 1% worldwide) <a class="cite" href="album.html#games">[Album]</a>.</p>
           </div>
         </article>
 
@@ -257,7 +259,7 @@
           <div>
             <a class="org-link" href="https://uwaterloo.ca/"><img class="org-logo" src="assets/uwaterloo-logo.png" alt="University of Waterloo" width="798" height="219"></a>
             <p class="where">Remote Research Assistant · Advisor: Prof. Yuhao Chen</p>
-            <p>Embodied perception and reasoning for manipulation <a class="cite" href="#pub-1">[1]</a> and navigation <a class="cite" href="#pub-5">[5]</a>.</p>
+            <p>Embodied perception and reasoning for manipulation <a class="cite" href="#pub-1">[1]</a> and navigation <a class="cite" href="#pub-6">[6]</a>.</p>
           </div>
         </article>
       </section>
